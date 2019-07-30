@@ -1,57 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import faker from 'faker'
-import CommentDetail from './CommentDetail'
-import ApprovalCard from './ApprovalCard'
+import SeasonDisplay from './SeasonDisplay'
 
 const App = () => {
+    window.navigator.geolocation.getCurrentPosition(
+        (position) => console.log(position),
+        err => console.log(err)
+    )
     return (
-        <div className="ui container comments">
-            <ApprovalCard>
-                <div>
-                    <h4>Warning!</h4>
-                    Are you sure you want to do this?
-                </div>
-            </ApprovalCard>
-
-            <ApprovalCard>
-                <CommentDetail
-                    author="Sam"
-                    timeAgo="Today at 4:45PM"
-                    content="Nice blog post"
-                    avatar={faker.image.avatar()}
-                />
-            </ApprovalCard>
-            <ApprovalCard>
-                <CommentDetail
-                    author="Ajex"
-                    timeAgo="Today at 1:00PM"
-                    content="I link the subject"
-                    avatar={faker.image.avatar()}
-                />
-            </ApprovalCard>
-
-            <ApprovalCard>
-                <CommentDetail
-
-                    author="Jane"
-                    timeAgo="Testerday at 5:25PM"
-                    content="Nice blog post"
-                    avatar={faker.image.avatar()}
-                />
-            </ApprovalCard>
-
-
-            <ApprovalCard>
-                <CommentDetail
-                    author="Jane"
-                    timeAgo="Today at 2:13AM"
-                    content="I link the writing"
-                    avatar={faker.image.avatar()}
-                />
-            </ApprovalCard>
-
-
+        <div>Hello React
+            <SeasonDisplay/>
         </div>
     )
 }
