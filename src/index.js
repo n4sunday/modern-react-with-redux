@@ -1,20 +1,12 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-<<<<<<< HEAD
-import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import App from './components/App'
-import reducers from './reducers'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
-    <Provider store={createStore(reducers)}>
-        <App />
-    </Provider>,
-=======
-import App from './components/App'
+ReactDOM.render(<App />, document.getElementById('root'));
 
-ReactDOM.render(
-    <App />,
->>>>>>> master
-    document.querySelector('#root')
-)
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
